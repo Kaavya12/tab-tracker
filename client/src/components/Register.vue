@@ -1,13 +1,24 @@
 <template>
-  <v-layout column>
-    <v-flex xs6 offset-xs3>
+<div>
+  <v-app-bar color="deep-purple accent-4"
+      dense
+      dark>
+      <v-toolbar-title>Tab Tracker</v-toolbar-title></v-app-bar>
+
+<v-container>
+  <v-row>
+    <v-col xl="6"
+        offset-xl="3">
+      <v-card
+        elevation="12"
+      >
       <div class="white elevation-2">
         <v-toolbar dense dark>
           <v-toolbar-title> Register </v-toolbar-title>
         </v-toolbar>
       </div>
       <br>
-      <div class="pl-4 pr-4 pt-2 pb-2">
+      <div>
         <input
           type="email"
           name="email"
@@ -24,9 +35,11 @@
         <br>
         <v-btn class="cyan" @click="register"> Register </v-btn>
     </div>
-    </v-flex>
-  </v-layout>
-
+</v-card>
+    </v-col>
+  </v-row>
+</v-container>
+</div>
 </template>
 
 <script>
@@ -60,5 +73,11 @@ export default {
 <style scoped>
   .error{
     color: red;
+  }
+
+  input{
+    border-bottom: 1px solid black;
+    margin: 20px 20px 20px 20px;
+    width: 75%;
   }
 </style>
